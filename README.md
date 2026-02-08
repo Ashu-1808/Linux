@@ -1,2 +1,125 @@
-# Linux
-data:image/png;base64,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
+##  What is an Operating System?
+```
+An Operating System (OS) is system software that acts as an interface between the user and computer hardware.
+It manages CPU, memory, storage, devices, and allows applications to run.
+
+Examples: Linux, Windows, macOS, Unix
+```
+#Types of Operating Systems
+## 1️⃣ Batch Operating System
+```
+Jobs are collected and executed in batches
+No user interaction during execution
+Example: Payroll systems
+```
+## 2️⃣ Time-Sharing Operating System
+```
+Multiple users share CPU time
+Fast response time
+Example: Linux, Unix
+```
+## 3️⃣ Distributed Operating System
+```
+Multiple systems work together as one
+Improves reliability and performance
+Example: Cluster systems
+```
+## 4️⃣ Network Operating System
+```
+Manages network resources
+Used in client-server environments
+Example: Linux Server, Windows Server
+```
+## 5️⃣ Real-Time Operating System (RTOS)
+```
+Processes data within strict time limits
+Used in embedded and critical systems
+Example: RTLinux, VxWorks
+```
+## What is a Server?
+```
+A server is a computer or system that provides services, resources, or data to other computers (clients) over a network.
+Examples of Server Types:
+Web Server – Hosts websites
+File Server – Stores and shares files
+Database Server – Manages databases
+Application Server – Runs backend applications
+```
+```
+💡Most production servers use Linux due to its stability, security, and zero licensing cost.
+```
+## Linux vs Windows
+```
+|Feature	|Linux	|Windows |
+|---------|-------|--------|
+|Cost	|Free & Open Source	|Paid |
+|Source Code |Open	|Closed |
+|Security	|Very strong	|More malware-prone |
+|Performance	|Lightweight	|Resource heavy |
+|Customization	|High	|Limited |
+|Stability	|Very stable	|Needs frequent reboot |
+|Usage	|Servers, Cloud, DevOps	|Desktop, Gaming |
+```
+## Desktop OS vs Server OS
+```
+|Feature	|Desktop OS	|Server OS |
+|---------|-----------|----------|
+|Purpose	|Personal use	|Provide services |
+|Users	|Single / Few	|Multiple users |
+|GUI	|Mandatory	|Optional |
+|Performance	|Moderate	|High & optimized |
+|Examples	|Ubuntu Desktop, Windows 11	|RHEL, Ubuntu Server |
+```
+# Linux Architecture
+## Linux Architecture Diagram
+
+Text Diagram (for reference):
+
++----------------------+
+|   User Applications  |
++----------------------+
+|       Shell          |
++----------------------+
+| System Libraries     |
++----------------------+
+|       Kernel         |
++----------------------+
+|      Hardware        |
++----------------------+
+
+## Linux Architecture Components
+## a. Hardware
+```
+Physical components like CPU, RAM, disk, network devices
+```
+## b. Kernel
+```
+Core of Linux OS
+Manages:Process scheduling, Memory management, Device drivers, File systems
+```
+## c. System Libraries
+```
+Provide functions used by applications
+Help applications interact with the kernel
+```
+## d. Shell
+```
+Command-line interface
+Acts as a bridge between user and kernel
+Examples: bash, sh, zsh
+```
+## e. User Applications
+```
+Software used by users
+Examples: browsers, editors, servers
+```
+
+## Popular Linux Distributions:
+```
+Ubuntu – Beginner-friendly, desktop & server
+Red Hat Enterprise Linux (RHEL) – Enterprise use
+CentOS / Rocky Linux – RHEL-based free distros
+Debian – Stable and secure
+Kali Linux – Cybersecurity & penetration testing
+Amazon Linux – Optimized for AWS
+```

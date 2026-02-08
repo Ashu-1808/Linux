@@ -116,3 +116,29 @@ Examples: browsers, editors, servers
 5.Kali Linux – Cybersecurity & penetration testing
 6.Amazon Linux – Optimized for AWS
 ```
+## Linux Directory Structure
+```
+Linux follows a hierarchical directory structure, starting from the root directory (/).
+Every file and directory in Linux exists under /.
+```
+| Directory | One-Line Explanation                                          |
+| --------- | ------------------------------------------------------------- |
+| `/`       | Root directory; starting point of the entire Linux filesystem |
+| `/bin`    | Essential user command binaries like `ls`, `cp`, `mv`         |
+| `/sbin`   | System administration commands mainly for root user           |
+| `/etc`    | System-wide configuration files                               |
+| `/home`   | Home directories for normal users                             |
+| `/root`   | Home directory of the root (administrator) user               |
+| `/lib`    | Shared libraries required by essential system binaries        |
+| `/lib64`  | 64-bit shared libraries                                       |
+| `/boot`   | Boot loader and kernel files needed to start the system       |
+| `/dev`    | Device files representing hardware components                 |
+| `/proc`   | Virtual filesystem with process and kernel information        |
+| `/sys`    | Kernel and hardware information interface                     |
+| `/tmp`    | Temporary files, usually cleared on reboot                    |
+| `/usr`    | User applications, commands, and libraries                    |
+| `/var`    | Variable data like logs, mail, and spool files                |
+| `/mnt`    | Temporary mount point for filesystems                         |
+| `/media`  | Mount point for removable devices (USB, CD/DVD)               |
+| `/opt`    | Optional or third-party software installations                |
+| `/srv`    | Data served by system services (FTP, HTTP, etc.)              |

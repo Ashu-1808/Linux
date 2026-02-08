@@ -5,29 +5,29 @@ It manages CPU, memory, storage, devices, and allows applications to run.
 
 Examples: Linux, Windows, macOS, Unix
 ```
-##Types of Operating Systems
+## Types of Operating Systems
 ```
-1 Batch Operating System:
+## 1 Batch Operating System:
 Jobs are collected and executed in batches
 No user interaction during execution
 Example: Payroll systems
 
-2 Time-Sharing Operating System:
+## 2 Time-Sharing Operating System:
 Multiple users share CPU time
 Fast response time
 Example: Linux, Unix
 
-3 Distributed Operating System:
+## 3 Distributed Operating System:
 Multiple systems work together as one
 Improves reliability and performance
 Example: Cluster systems
 
-4 Network Operating System:
+## 4 Network Operating System:
 Manages network resources
 Used in client-server environments
 Example: Linux Server, Windows Server
 
-5 Real-Time Operating System (RTOS):
+## 5 Real-Time Operating System (RTOS):
 Processes data within strict time limits
 Used in embedded and critical systems
 Example: RTLinux, VxWorks

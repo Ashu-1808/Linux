@@ -229,10 +229,10 @@ Always edit sudoers file using : visudo (to avoid syntax errors)
 
 Group
 A group is a collection of users that helps in managing permissions easily.
-
-cat /etc/group (Entry Example)
+```
+Example ofcat /etc/group 
 developers:x:1005:alice,bob
-
+```
 Fields in /etc/group (Fields separated by :)
 | Field Name               | Value        | Description                                       |
 | ------------------------ | ------------ | ------------------------------------------------- |

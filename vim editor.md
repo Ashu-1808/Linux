@@ -33,7 +33,8 @@ vim filename.txt
 ## 1.Normal Mode
 
 
-| 1.Normal Mode – Navigation|
+1.Normal Mode – Navigation
+
 | Key        | Action                |
 | ---------- | --------------------- |
 | `h j k l`  | Left, Down, Up, Right |

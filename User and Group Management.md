@@ -116,40 +116,40 @@ chage Command
 chage In Linux is used the chage (change-age) command to manage and view password aging and
 account expiration policies for user
 
-
 Syntax:
 ```
 chage [options] <username>
 ```
 Common chage Options
-→ List password aging information
+1 List password aging information
 ```
 chage -l <username>
 ```
-→ Maximum days password is valid
+2 Maximum days password is valid
 ```
 chage -M 30 <username>
 ```
-→ Minimum days between password change
+3 Minimum days between password change
 ```
 chage -m 7 <username>
 ```
-→ Warning days before password expiry
+4 Warning days before password expiry
 ```
 chage -W 10 <username>
 ```
-→ Inactive days after password expiry
+5 Inactive days after password expiry
 ```
 chage -I 14 <username>
 ```
-→ Account expiry date
+6 Account expiry date
 ```
 chage -E 2025-12-31 <username>
 ```
-→ Force password change at next login
+7 Force password change at next login
 ```
 chage -d 0 <username>
 ```
+
 ## Modify Existing User
 usermod Command: Used to modify user account details
 Syntax:
@@ -221,9 +221,9 @@ Meaning:
 
 ```
 ##Important Note
-
+```
 Always edit sudoers file using : visudo (to avoid syntax errors)
-
+```
 
 ## Group Management In Linux)
 
@@ -352,7 +352,3 @@ gpasswd -A "" <groupname>
 
 
 
-
-To create a home directory:
-
-useradd -m <username>

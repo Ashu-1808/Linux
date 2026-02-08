@@ -71,15 +71,16 @@ abhi:x:1001:1001:Abhi Kumar:/home/abhi:/bin/bash
 Fields in /etc/passwd
 ```
 Fields in /etc/passwd (Fields separated by :)
+| Field Name               | Value        | Description                             |
+| ------------------------ | ------------ | --------------------------------------- |
+| **Username**             | `abhi`       | Name of the user account                |
+| **Password Placeholder** | `x`          | Actual password stored in `/etc/shadow` |
+| **User ID (UID)**        | `1001`       | Unique ID of the user                   |
+| **Group ID (GID)**       | `1001`       | Primary group ID of the user            |
+| **User Info (GECOS)**    | `Abhi Kumar` | Full name / description of user         |
+| **Home Directory**       | `/home/abhi` | Default login directory                 |
+| **Login Shell**          | `/bin/bash`  | Shell assigned to the user              |
 
-| Username | abhi |Name of the user account |
-|----------|------|--------------------------|
-| Password placeholder | x |Actual password is stored in /etc/shadow |
-| User ID (UID) | 1001 | Unique ID of the user |
-| Group ID (GID) | 1001 | Primary group ID of the user |
-| User Info (GECOS) | Abhi Kumar | Full name or description of user |
-| Home Directory | /home/abhi | Default login directory |
-| Login Shell | /bin/bash | Shell assigned to the user |
 
 📂 /etc/shadow
 Stores encrypted passwords
@@ -91,14 +92,16 @@ abhi:$6$Tz3...Qw/:19540:7:90:10:14:19999
 ```
  Fields in /etc/shadow (Fields separated by :)
 
-| Username | abhi | Name of the user |
-| Encrypted Password | $6$Tz3...Qw/| Encrypted (hashed) password (Actual password is not readable)  |
-| Last Password Change | 19540 | Number of days since 01-01-1970 |
-| Minimum Days | 7 | Minimum days before password can be changed |
-| Maximum Days | 90 | Password validity period |
-| Warning Days | 10 | Days before password expiry warning |
-| Inactive Days | 14 | Days after expiry before account is locked |
-| Account Expiry Date | 19999 | Date when account expires (-1 or empty → never expires) |
+| Field Name               | Value          | Description                                                   |
+| ------------------------ | -------------- | ------------------------------------------------------------- |
+| **Username**             | `abhi`         | Name of the user                                              |
+| **Encrypted Password**   | `$6$Tz3...Qw/` | Encrypted (hashed) password (actual password is not readable) |
+| **Last Password Change** | `19540`        | Number of days since **01-01-1970**                           |
+| **Minimum Days**         | `7`            | Minimum days before password can be changed                   |
+| **Maximum Days**         | `90`           | Password validity period                                      |
+| **Warning Days**         | `10`           | Days before password expiry warning                           |
+| **Inactive Days**        | `14`           | Days after expiry before account is locked                    |
+| **Account Expiry Date**  | `19999`        | Date when account expires (`-1` or empty → never expires)     |
 
 
 
@@ -119,27 +122,33 @@ Syntax:
 chage [options] <username>
 ```
 Common chage Options
+→ List password aging information
 ```
 chage -l <username>
-→ List password aging information
-
-chage -M 30 <username>
+```
 → Maximum days password is valid
-
-chage -m 7 <username>
+```
+chage -M 30 <username>
+```
 → Minimum days between password change
-
-chage -W 10 <username>
+```
+chage -m 7 <username>
+```
 → Warning days before password expiry
-
-chage -I 14 <username>
+```
+chage -W 10 <username>
+```
 → Inactive days after password expiry
-
-chage -E 2025-12-31 <username>
+```
+chage -I 14 <username>
+```
 → Account expiry date
-
-chage -d 0 <username>
+```
+chage -E 2025-12-31 <username>
+```
 → Force password change at next login
+```
+chage -d 0 <username>
 ```
 ## Modify Existing User
 usermod Command: Used to modify user account details
@@ -148,34 +157,41 @@ Syntax:
 usermod [options] <username>
 ```
 Common usermod Options
+1 Assign no-login shell →(Prevents user from logging in)
 ```
 usermod -s /sbin/nologin steve
-→ Assign no-login shell
-(Prevents user from logging in)
-
+```
+2 to check user shell
+```
 echo $shell
-→ to check user shell
-
+```
+3 Check Valid Login Shells
+```
 cat /etc/shells
-→ Check Valid Login Shells
-
+```
+4 Change User ID
+```
 usermod -u <UID> <username>
-→ Change User ID
-
+```
+5 Used to change user ID
+```
 usermod -u 3000 tony
-→ Used to change user ID
-
+```
+6 Assign new home directory
+```
 usermod -d <new_home_dir> <username>
-→ Assign new home directory
-
+```
+7 Used to add comment for user
+```
 usermod -c "development center" bruce
-→ Used to add comment for user
-
+```
+8 Locks the user account
+```
 usermod -L <username>
-→ Locks the user account
-
+```
+9 Unlock User Account
+```
 usermod -U <username>
-→ Unlock User Account
 ```
 
 ## Sudoers File
@@ -218,91 +234,59 @@ cat /etc/group (Entry Example)
 developers:x:1005:alice,bob
 
 Fields in /etc/group (Fields separated by :)
-
-| Group Name | developers| Name of the group |
-| Password Placeholder  | x | Usually x (actual password stored in /etc/gshadow) |
-| Group ID (GID) | 1005 | Numerical ID for the group |
-| Group Members | alice,bob | Comma-separated list of users |
-
-
-📂 Important Files in Group Management
-1️⃣ /etc/group
-
-Stores group information
-
-Fields in /etc/group
+| Field Name               | Value        | Description                                       |
+| ------------------------ | ------------ | ------------------------------------------------- |
+| **Group Name**           | `developers` | Name of the group                                 |
+| **Password Placeholder** | `x`          | Actual group password is stored in `/etc/gshadow` |
+| **Group ID (GID)**       | `1005`       | Numerical ID for the group                        |
+| **Group Members**        | `alice,bob`  | Comma-separated list of users                     |
 
 
-Group name 
 
-Password →
-
-Group ID (GID) 
-
-Group members 
-
-2️⃣ /etc/gshadow
-
-Stores secure group information
-
-Only accessible by root
-
-Stores encrypted group passwords
+## Important Files in Group Management
+ Fields in /etc/group
+| Field              | Description                                            |
+| ------------------ | ------------------------------------------------------ |
+| **Group Name**     | Name of the group                                      |
+| **Password**       | Usually `x` (actual password stored in `/etc/gshadow`) |
+| **Group ID (GID)** | Numerical ID assigned to the group                     |
+| **Group Members**  | Comma-separated list of users in the group             |
 
 Fields in /etc/gshadow
 
-Group name
+| Field                    | Description                    |
+| ------------------------ | ------------------------------ |
+| **Group Name**           | Name of the group              |
+| **Encrypted Password**   | Stored group password (if any) |
+|                          | `!` or `*` → No group password |
+| **Group Administrators** | Users who can manage the group |
+| **Group Members**        | Members of the group           |
 
-Encrypted password
 
-If password is stored here
-
-! or * means no password
-
-Group administrators
-
-Group members
-
-⚙️ Commands for Group Management
-1️⃣ Add a Group
+## Commands for Group Management
+1️⃣ Add a Group = Used to create a new group
+```
 groupadd <groupname>
-
-
-Used to create a new group
-
-2️⃣ Delete a Group
+```
+2️⃣ Delete a Group = Deletes the specified group
+```
 groupdel <groupname>
-
-
-Deletes the specified group
-
+```
 3️⃣ Add User to a Group
-
-Using usermod
-
+```
 usermod -aG <groupname> <username>
-
-
--a → append
-
+```
+-a → append 
 -G → secondary group
 
 4️⃣ Set / Change Group Password
+```
 gpasswd -a <username> <groupname>
-
-
+```
 OR
-
+```
 gpasswd <groupname>
-
-
-
-/etc/group → group details
-
-/etc/gshadow → secure group data
-
-groupadd, groupdel, usermod → main group commands
-
+```
 
 Linux Group Commands & File Permissions
 
@@ -310,28 +294,30 @@ Linux Group Commands & File Permissions
 Common gpasswd Commands
 
 1️⃣ Delete a Group
-
+```
 gpasswd -d <username> <groupname>
-
-
-→ Removes user from the group
-
+```
 2️⃣ Add Multiple Users to a Group
-
-
+```
 gpasswd -M <user1,user2,user3> <groupname>
-→ Adds multiple users to a single group
+```
 
+3️⃣ Add a Single User to Multiple Groups
+```
 gpasswd -G <group1,group2,group3> <username>
-→ Add a Single User to Multiple Groups
+```
 
+4️⃣ Assign Group Admin
 
+```
 gpasswd -A <username> <group>
- Assigns admin to a group
+```
 
-
+5️⃣ Remove Admin from Group
+```
 gpasswd -A "" <groupname>
-→ Removes Admin from Group
+
+```
 
 
 

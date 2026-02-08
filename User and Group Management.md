@@ -29,6 +29,7 @@ Their own home directory (e.g., /home/username)
 Specific permissions to access files and resources
 Used for regular login and work.
 
+
 Adding a New User
 ```
 adduser <username>
@@ -38,7 +39,6 @@ Automatically creates Home directory, User group, Password and default settings
 ```
 useradd <username>
 ```
-
 ⚠️ Note:By default, useradd does not create a home directory.
 To create a home directory:
 ```

@@ -72,17 +72,10 @@ Application Server – Runs backend applications
 | **Examples** | Ubuntu Desktop, Windows 11	| RHEL, Ubuntu Server |
 
 # Linux Architecture
+
 ## Linux Architecture Diagram
 ![image alt](https://github.com/Ashu-1808/Linux/blob/d4f7c6abf5170ce2fe19b88ec3a5ccce49fc5c3f/linux-architecture.jpg)
 
-Text Diagram (for reference):
-
-|   User Applications  |
-|----------------------|
-|       Shell          |
-| System Libraries     |
-|       Kernel         |
-|      Hardware        |
 
 
 ## Linux Architecture Components

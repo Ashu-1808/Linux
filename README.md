@@ -73,7 +73,7 @@ Application Server – Runs backend applications
 
 # Linux Architecture
 ## Linux Architecture Diagram
-
+https://github.com/Ashu-1808/Linux/blob/d4f7c6abf5170ce2fe19b88ec3a5ccce49fc5c3f/linux-architecture.jpg
 Text Diagram (for reference):
 
 |   User Applications  |

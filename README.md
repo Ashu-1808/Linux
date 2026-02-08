@@ -5,33 +5,29 @@ It manages CPU, memory, storage, devices, and allows applications to run.
 
 Examples: Linux, Windows, macOS, Unix
 ```
-#Types of Operating Systems
-## 1️⃣ Batch Operating System
+##Types of Operating Systems
 ```
+1 Batch Operating System:
 Jobs are collected and executed in batches
 No user interaction during execution
 Example: Payroll systems
-```
-## 2️⃣ Time-Sharing Operating System
-```
+
+2 Time-Sharing Operating System:
 Multiple users share CPU time
 Fast response time
 Example: Linux, Unix
-```
-## 3️⃣ Distributed Operating System
-```
+
+3 Distributed Operating System:
 Multiple systems work together as one
 Improves reliability and performance
 Example: Cluster systems
-```
-## 4️⃣ Network Operating System
-```
+
+4 Network Operating System:
 Manages network resources
 Used in client-server environments
 Example: Linux Server, Windows Server
-```
-## 5️⃣ Real-Time Operating System (RTOS)
-```
+
+5 Real-Time Operating System (RTOS):
 Processes data within strict time limits
 Used in embedded and critical systems
 Example: RTLinux, VxWorks
@@ -49,43 +45,47 @@ Application Server – Runs backend applications
 💡Most production servers use Linux due to its stability, security, and zero licensing cost.
 ```
 ## Linux vs Windows
+
+## Differences:
 ```
-|Feature	|Linux	|Windows |
+| Feature	| Linux	| Windows |
 |---------|-------|--------|
-|Cost	|Free & Open Source	|Paid |
-|Source Code |Open	|Closed |
-|Security	|Very strong	|More malware-prone |
-|Performance	|Lightweight	|Resource heavy |
-|Customization	|High	|Limited |
-|Stability	|Very stable	|Needs frequent reboot |
-|Usage	|Servers, Cloud, DevOps	|Desktop, Gaming |
+| Cost	| Free & Open Source	| Paid |
+| Source Code | Open	| Closed |
+| Security	| Very strong	| More malware-prone |
+| Performance	| Lightweight	| Resource heavy |
+| Customization	| High	| Limited |
+| Stability	| Very stable	| Needs frequent reboot |
+| Usage	| Servers, Cloud, DevOps	| Desktop, Gaming |
 ```
 ## Desktop OS vs Server OS
+
+## Differences:
 ```
-|Feature	|Desktop OS	|Server OS |
+| Feature	| Desktop OS	| Server OS |
 |---------|-----------|----------|
-|Purpose	|Personal use	|Provide services |
-|Users	|Single / Few	|Multiple users |
-|GUI	|Mandatory	|Optional |
-|Performance	|Moderate	|High & optimized |
-|Examples	|Ubuntu Desktop, Windows 11	|RHEL, Ubuntu Server |
+| Purpose	| Personal use	| Provide services |
+| Users	| Single / Few	| Multiple users |
+| GUI	| Mandatory	| Optional |
+| Performance	| Moderate	| High & optimized |
+| Examples	| Ubuntu Desktop, Windows 11	| RHEL, Ubuntu Server |
 ```
 # Linux Architecture
 ## Linux Architecture Diagram
 
 Text Diagram (for reference):
 
-+----------------------+
+
 |   User Applications  |
-+----------------------+
+|----------------------|
 |       Shell          |
-+----------------------+
+|----------------------|
 | System Libraries     |
-+----------------------+
+|----------------------|
 |       Kernel         |
-+----------------------+
+|----------------------|
 |      Hardware        |
-+----------------------+
+
 
 ## Linux Architecture Components
 ## a. Hardware

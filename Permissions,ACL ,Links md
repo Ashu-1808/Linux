@@ -1,0 +1,175 @@
+## Linux File Permissions
+File permissions decide who can access, modify, and execute a file
+Permissions apply to:i)Files
+                     ii)Directories.
+
+                     
+| Command          | Purpose                                        |
+| ---------------- | ---------------------------------------------- |
+| `ls -l filename` | Shows file permissions                         |
+| `ls -ltd dirname` | Shows directory permissions (not its contents) |
+
+-l → Long listing format (shows permissions, owner, group, size, date)
+-t → Sort by modification time (latest first)
+-d → List the directory itself, not its content     
+
+## Format of file permission
+- rwx r-x r--  1  abhi  developers  2450  Feb 10 10:30  demo.txt
+
+Explanation of Each Field
+| Part                   | Value          | Meaning                        |
+| ---------------------- | -------------- | ------------------------------ |
+| **File type**          | `-`            | Regular file                   |
+| **Owner permissions**  | `rwx`          | Read, write, execute for owner |
+| **Group permissions**  | `r-x`          | Read, execute for group        |
+| **Others permissions** | `r--`          | Read only for others           |
+| **Number of links**    | `1`            | Hard link count                |
+| **Owner of the file**  | `abhi`         | User who owns the file         |
+| **Group associated**   | `developers`   | Group owner                    |
+| **File size**          | `2450`         | Size in bytes                  |
+| **Time & date**        | `Feb 10 10:30` | Last modified date & time      |
+| **File name**          | `demo.txt`     | Name of file                   |
+
+## File Types in Linux
+| Symbol | File Type             | Description                                         |
+| ------ | --------------------- | --------------------------------------------------- |
+| `-`    | Normal file           | Text file or binary file                            |
+| `d`    | Directory             | Folder containing files                             |
+| `l`    | Link file             | Symbolic link to another file                       |
+| `b`    | Block device file     | Used for block storage devices (e.g. hard disk)     |
+| `c`    | Character device file | Handles data character by character (e.g. keyboard) |
+| `p`    | Pipe                  | Used for inter-process communication                |
+
+## File Ownership in Linux
+| Ownership Type | Description                          |
+| -------------- | ------------------------------------ |
+| **Owner**      | User who created the file            |
+| **Group**      | Group associated with the file owner |
+| **Others**     | All other users on the system        |
+
+## Permission Breakdown
+| Permission | Symbol | Value | Description             |
+| ---------- | ------ | ----- | ----------------------- |
+| Read       | r      | 4     | Open / view file        |
+| Write      | w      | 2     | Edit or modify file     |
+| Execute    | x      | 1     | Run the file as program |
+
+
+## Changing Ownership Commands:
+
+1 Change Owner
+```
+chown <username> <filename>
+chown abhi demoFile.txt
+```
+2 Change Group Owner
+```
+chgrp <groupname> <filename>
+chgrp dev demoFile.txt
+```
+
+3 Change Owner & Group Simultaneously
+```
+chown <user>:<group> <filename>
+chown steve:avengers demoFile.txt
+```
+
+##File Permission Command (chmod):Used to change file or directory permissions
+
+chmod 755 filename
+
+Owner → rwx
+Group → r-x
+Others → r-x
+
+## What is Umask?
+
+Umask determines the default permissions for newly created files and directories
+It does not affect existing files
+
+ Maximum Permissions:
+| Type      | Permission | Symbolic  |
+| --------- | ---------- | --------- |
+| Directory | 777        | rwxrwxrwx |
+| File      | 666        | rw-rw-rw- |
+
+```
+Permissions are calculated as:
+   type     Maximum Permission - Default Permission = Umask
+   file       666           -            644       =  022
+   dir.       777           -            750       =   027       
+```
+chmod (Symbolic Method)
+Permission Symbols
+
+| Symbol | Meaning | Description                    |
+| ------ | ------- | ------------------------------ |
+| **u**  | User    | File owner                     |
+| **g**  | Group   | Group associated with the file |
+| **o**  | Others  | All other users                |
+| **a**  | All     | User + Group + Others          |
+
+Operators
+
+| Operator | Meaning | Description                                |
+| -------- | ------- | ------------------------------------------ |
+| **+**    | Add     | Adds the specified permission              |
+| **-**    | Remove  | Removes the specified permission           |
+| **=**    | Set     | Sets exact permission (overrides existing) |
+
+| Command                          | Meaning                                                                |
+| -------------------------------- | ---------------------------------------------------------------------- |
+| `chmod u+r file`                 | Add **read (r)** permission to **user (owner)**                        |
+| `chmod g+w file`                 | Add **write (w)** permission to **group**                              |
+| `chmod o-x file`                 | Remove **execute (x)** permission from **others**                      |
+| `chmod a=r file`                 | Set **read-only (r)** permission to **everyone** (user, group, others) |
+|  `chmod u=rwx,g=rx,o=r demo.txt` | Combination Example                                                    |      
+
+
+## Access Control List (ACL)
+
+What is ACL?
+ACL is used to give specific permissions to specific users
+Works on particular files or directories
+Useful when standard owner/group/others permissions are not enough
+
+| Command                                | Description                                | Example                         |
+| -------------------------------------- | ------------------------------------------ |---------------------------------|
+| `setfacl -m u:username:rwx <filename>` | Give **rwx permission** to a specific user | setfacl -m u:alice:rwx demo.txt |
+| `getfacl <filename>`                   | View ACL permissions of a file             | getfacl demo.txt                |
+| `setfacl -x u:username <filename>`     | Remove ACL permission of a user            | setfacl -x u:alice demo.txt     |
+ 
+
+## Hard Link vs Soft Link (Symbolic Link)
+| Feature                     | **Hard Link**                             | **Soft Link (Symbolic Link)**      |
+| --------------------------- | ----------------------------------------- | ---------------------------------- |
+| Meaning                     | Acts as a **backup** of the original file | Acts as a **shortcut** to the file |
+| Inode number                | **Same** as original file                 | **Different** inode number         |
+| File size                   | Same as original file                     | Different (stores file path)       |
+| Link count                  | **Increases**                             | No change                          |
+| If original file is deleted | **Still works**                           | **Broken link**                    |
+| Link to directory           |  Not allowed                              |  Allowed                           |
+| Works across file systems   |  No                                       |  Yes                               |
+| File type shown             | `-` (regular file)                        | `l` (symbolic link)                |
+
+Create Hard Link
+```
+ln file1 hardlink_file
+```
+Create Soft Link
+```
+ln -s file1 softlink_file
+```
+## What is an Inode?
+
+An inode (index node) is a unique number assigned to every file and directory in Linux
+It stores metadata about the file
+
+| Item                | Details                             |
+| ------------------- | ----------------------------------- |
+| **Command**         | `ls -i filename`                    |
+| **Example Command** | `ls -i demo.txt`                    |
+| **Sample Output**   | `123456 demo.txt`                   |
+```
+Inode Number =123456                           
+```

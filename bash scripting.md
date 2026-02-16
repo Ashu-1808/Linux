@@ -10,8 +10,8 @@
 
 - A **Linux Shell** is an interface between:
 
-  . The **User**
-  . The **Operating System (Kernel)**
+  1. The **User**
+  2. The **Operating System (Kernel)**
 
 ---
 

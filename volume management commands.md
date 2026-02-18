@@ -2,11 +2,9 @@
 
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2Ag0H1kb7u6ZAQ-vObWEY1EA.png)
 
-![Image](https://linuxhandbook.com/content/images/2024/03/Get-specific-details-of-disk-block-using-the-lsblk.png)
 
 ![Image](https://access.redhat.com/webassets/avalon/d/Red_Hat_Enterprise_Linux-7-Logical_Volume_Manager_Administration-en-US/images/aa96fde158c47229d69b70d319d41677/basic-lvm-volume.png)
 
-![Image](https://media.licdn.com/dms/image/v2/C5612AQHxm_QyV7iTVA/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1587719576017?e=1770249600\&t=pG_bSHwdLYGNP2JO3gKg130DKi7zzgwouNk5X0lwMZ4\&v=beta)
 
 ## 🔷 LVM Layer Comparison
 

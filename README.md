@@ -6,32 +6,14 @@ It manages CPU, memory, storage, devices, and allows applications to run.
 Examples: Linux, Windows, macOS, Unix
 ```
 ## Types of Operating Systems
-```
-1 Batch Operating System:
-Jobs are collected and executed in batches
-No user interaction during execution
-Example: Payroll systems
+| Type of OS      | Description                                                            | Example                 |
+| --------------- | ---------------------------------------------------------------------- | ----------------------- |
+| Batch OS        | Processes jobs in batches with no direct user interaction              | Early mainframe systems |
+| Time-Sharing OS | Multiple users share system resources simultaneously                   | Linux, Unix             |
+| Distributed OS  | Manages multiple networked computers as one system                     | Cluster systems         |
+| Network OS      | Provides services like file sharing and user management over a network | Windows Server          |
+| Real-Time OS    | Processes tasks within strict timing constraints                       | FreeRTOS                |
 
-2 Time-Sharing Operating System:
-Multiple users share CPU time
-Fast response time
-Example: Linux, Unix
-
-3 Distributed Operating System:
-Multiple systems work together as one
-Improves reliability and performance
-Example: Cluster systems
-
-4 Network Operating System:
-Manages network resources
-Used in client-server environments
-Example: Linux Server, Windows Server
-
-5 Real-Time Operating System (RTOS):
-Processes data within strict time limits
-Used in embedded and critical systems
-Example: RTLinux, VxWorks
-```
 ## What is a Server?
 ```
 A server is a computer or system that provides services, resources, or data to other computers (clients) over a network.

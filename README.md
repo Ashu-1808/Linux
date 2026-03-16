@@ -61,27 +61,19 @@ Application Server – Runs backend applications
 
 
 ## Linux Architecture Components
-```
-a. Hardware:
-Physical components like CPU, RAM, disk, network devices
+## Linux Architecture
 
-b. Kernel:
-Core of Linux OS
-Manages:Process scheduling, Memory management, Device drivers, File systems
+**Linux architecture has four main components hardware,kernel,shell and user/application**
 
-c. System Libraries:
-Provide functions used by applications
-Help applications interact with the kernel
 
-d. Shell:
-Command-line interface
-Acts as a bridge between user and kernel
-Examples: bash, sh, zsh
 
-e. User Applications:
-Software used by users
-Examples: browsers, editors, servers
-```
+**Hardware:** it consists of motherboard ,CPU,HDD etc
+
+**Kernel:** kernel is the heart/core of the OS, kernel communicates with Hardware
+
+**Shell:** provides interface to user to communicate with kernel 
+
+**Application/user:** Users interact with the system through varies applications such as office, games, etc. 
 
 ## Popular Linux Distributions:
 ```

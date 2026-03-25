@@ -24,7 +24,8 @@ scp [options] source destination
 ```
 ## Common scp Examples
 1 Copy file from local → remote
-```scp file.txt user@remote_ip:/home/user/
+```
+scp /local/path/file.txt user@remote_ip:/home/user/
 ```
 2 Copy file from remote → local
 ```

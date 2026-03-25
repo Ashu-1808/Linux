@@ -15,7 +15,7 @@ Examples: Linux, Windows, macOS, Unix
 | Real-Time OS    | Processes tasks within strict timing constraints                       | FreeRTOS                |
 
 ## What is a Server?
-```
+
 A server is a computer or system that provides services, resources, or data to other computers (clients) over a network.
 
 Server Types:
@@ -27,10 +27,10 @@ Server Types:
 3.Database Server – Manages databases
 
 4.Application Server – Runs backend applications
-```
-```
+
+
 💡Most production servers use Linux due to its stability, security, and zero licensing cost.
-```
+
 ## Linux vs Windows
 
 ## Differences:

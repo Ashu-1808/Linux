@@ -67,30 +67,36 @@ Server Types:
 
 ## Linux Architecture
 
-**Linux architecture has four main components hardware,kernel,shell and user/application**
+**1.Linux architecture has four main components hardware,kernel,shell and user/application**
 
-**Hardware:** it consists of motherboard ,CPU,HDD etc
+**2.Hardware:** it consists of motherboard ,CPU,HDD etc
 
-**Kernel:** kernel is the heart/core of the OS, kernel communicates with Hardware
+**3.Kernel:** kernel is the heart/core of the OS, kernel communicates with Hardware
 
-**Shell:** provides interface to user to communicate with kernel 
+**4.Shell:** provides interface to user to communicate with kernel 
 
-**Application/user:** Users interact with the system through varies applications such as office, games, etc. 
+**5.Application/user:** Users interact with the system through varies applications such as office, games, etc. 
 
-## Popular Linux Distributions:
-```
+### Popular Linux Distributions:
+
 1.Ubuntu – Beginner-friendly, desktop & server
+
 2.Red Hat Enterprise Linux (RHEL) – Enterprise use
+
 3.CentOS / Rocky Linux – RHEL-based free distros
+
 4.Debian – Stable and secure
+
 5.Kali Linux – Cybersecurity & penetration testing
+
 6.Amazon Linux – Optimized for AWS
-```
+
 ## Linux Directory Structure
-```
-Linux follows a hierarchical directory structure, starting from the root directory (/).
-Every file and directory in Linux exists under /.
-```
+
+1.Linux follows a hierarchical directory structure, starting from the root directory (/).
+
+2.Every file and directory in Linux exists under /.
+
 | Directory | One-Line Explanation                                          |
 | --------- | ------------------------------------------------------------- |
 | `/`       | Root directory; starting point of the entire Linux filesystem |

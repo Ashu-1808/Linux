@@ -1,10 +1,11 @@
 ##  What is an Operating System?
-```
+
 An Operating System (OS) is system software that acts as an interface between the user and computer hardware.
+
 It manages CPU, memory, storage, devices, and allows applications to run.
 
 Examples: Linux, Windows, macOS, Unix
-```
+
 ## Types of Operating Systems
 | Type of OS      | Description                                                            | Example                 |
 | --------------- | ---------------------------------------------------------------------- | ----------------------- |
